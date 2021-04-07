@@ -3,6 +3,7 @@ import './App.css'
 import FormDialog from './components/loginModal.js'
 import AppointmentForm from './components/AppointmentForm.js'
 import ListAppointments from './components/ListAppointments.js'
+import ButtonAppBar from './components/navbar.js'
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <div>
+        <ButtonAppBar loggedIn={loggedIn} setLogged={setLogged}/>
         <AfterLogin loggedIn={loggedIn} userType={userType} />
     </div>
   );

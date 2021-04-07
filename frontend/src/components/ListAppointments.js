@@ -42,7 +42,12 @@ export default function ListAppointments(props) {
                 .then(response => {
                     if (response.status == 200){
                         response.json().then(data => {
-                            console.log(data);
+                            if(data.bookings.length){
+                                console.log(data.bookings)
+                                setAppointmentList(data.bookings.map((data)=>{var temp = {...data}; temp['venue']=new Date(data.venue.split('T')[0]); return temp}))
+                            }else{
+                                setAppointmentList([{"id":0,"Choose Date":1,"To display Appointments":2},])
+                            }
                         })
                     }else{ //if(response.status == 400)
                         console.log("bad token")
@@ -55,19 +60,22 @@ export default function ListAppointments(props) {
    },[appointmentDate]);
 
    function getColumns(rows){
-       var row = Object.keys(rows[0]);
-       console.log(row);
-       return row.map((data)=>{return {"field":data,
-                                "headerName":data,
-                                "width":300,
+       var row = Object.keys(rows[0]).sort();
+
+       row = row.map((data)=>{return {"field":data,
+                                "headerName":data.toUpperCase(),
+                                "width":250,
                                }
                        }
-              )
+              );
+        return row;
+
    }
 
     return (
         <Grid
      container
+     width="70%"
      direction="column"
      alignItems="center"
      justify="center"

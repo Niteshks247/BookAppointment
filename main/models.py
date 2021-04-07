@@ -8,8 +8,8 @@ from rest_framework.authtoken.models import Token
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
-    if created:
-        Token.objects.create(user=instance)
+	if created:
+		Token.objects.create(user=instance)
 
 # Create your models here.
 class patient(models.Model):
@@ -28,8 +28,9 @@ class hospital(models.Model):
 
 class appointment(models.Model):
 	user = models.ForeignKey(patient, on_delete=models.CASCADE, related_name='appointments')
-	venue = models.DateTimeField(primary_key=True,blank=False)
+	venue = models.DateTimeField(blank=False)
 	hospital = models.ForeignKey(hospital, on_delete=models.CASCADE, related_name='appointments')
+	id = models.AutoField(primary_key=True)
 
 	def __str__(self):
 		return str(self.user)

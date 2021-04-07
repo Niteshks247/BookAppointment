@@ -16,6 +16,9 @@ timezone.now()
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])
 def checkToken(request):
+    """
+    To verify saved tokens
+    """
     token = request.headers['Authorization'].split()[1]
     try:
         print(token)
@@ -33,6 +36,9 @@ def checkToken(request):
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])
 def availableTime(request):
+    """
+    To find free schedule of Hospital and Patient on designated date and hospital.
+    """
     date = list(map(int,request.data.get('date',"").split('/')))
     hosp = request.data.get('hosp',"")
     date = datetime.date(date[2], date[0], date[1])
@@ -50,6 +56,9 @@ def availableTime(request):
 @api_view(["GET"])
 @permission_classes([permissions.IsAuthenticated])
 def hospitalList(request):
+    """
+    TO get the names of all Hospitals registered on the App.
+    """
     hosps = models.hospital.objects.all()
     serializer = hospitalSerializer(hosps,many=True,context={'request':request})
     return Response({'hospitals':serializer.data})
@@ -57,6 +66,9 @@ def hospitalList(request):
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])
 def reqAppointment(request):
+    """
+    For the Patient to send appointment request to.
+    """
     date = request.data.get('date',"").lower()
     time = request.data.get('time',"")
     hosp = request.data.get('hosp',"")
@@ -91,6 +103,9 @@ def reqAppointment(request):
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated,IsRelatedToHospital])
 def checkBookings(request):
+    """
+    For hospitals to check all bookings for the same.
+    """
     date = request.data.get('date',"").lower()
     try:
         hosp = request.user.hospital
@@ -107,7 +122,7 @@ def checkBookings(request):
         return Response({'error':'Invalid Data'})
     return Response({'bookings':serializer.data})
 
-
+#Tokenizer for authentication purpose
 class GetAuthToken(ObtainAuthToken):
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data,
