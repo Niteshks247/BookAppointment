@@ -1,0 +1,76 @@
+# packages in environment at C:\Users\nites\anaconda3\envs\endimension:
+#
+# Name                    Version                   Build  Channel
+argon2-cffi               20.1.0                   pypi_0    pypi
+asgiref                   3.3.1              pyhd3eb1b0_0  
+async-generator           1.10                     pypi_0    pypi
+attrs                     20.3.0                   pypi_0    pypi
+backcall                  0.2.0                    pypi_0    pypi
+bleach                    3.3.0                    pypi_0    pypi
+ca-certificates           2021.1.19            haa95532_1  
+certifi                   2020.12.5        py38haa95532_0  
+cffi                      1.14.5                   pypi_0    pypi
+colorama                  0.4.4                    pypi_0    pypi
+decorator                 4.4.2                    pypi_0    pypi
+defusedxml                0.7.1                    pypi_0    pypi
+django                    3.1.7              pyhd3eb1b0_0  
+django-cors-headers       3.7.0                    pypi_0    pypi
+django-filter             2.4.0                    pypi_0    pypi
+djangorestframework       3.12.4                   pypi_0    pypi
+entrypoints               0.3                      pypi_0    pypi
+ipykernel                 5.5.3                    pypi_0    pypi
+ipython                   7.22.0                   pypi_0    pypi
+ipython-genutils          0.2.0                    pypi_0    pypi
+jedi                      0.18.0                   pypi_0    pypi
+jinja2                    2.11.3                   pypi_0    pypi
+jsonschema                3.2.0                    pypi_0    pypi
+jupyter-client            6.1.12                   pypi_0    pypi
+jupyter-core              4.7.1                    pypi_0    pypi
+jupyterlab-pygments       0.1.2                    pypi_0    pypi
+krb5                      1.17.1               hc04afaa_0  
+libpq                     12.2                 h3235a2c_0  
+markdown                  3.3.4                    pypi_0    pypi
+markupsafe                1.1.1                    pypi_0    pypi
+mistune                   0.8.4                    pypi_0    pypi
+nbclient                  0.5.3                    pypi_0    pypi
+nbconvert                 6.0.7                    pypi_0    pypi
+nbformat                  5.1.2                    pypi_0    pypi
+nest-asyncio              1.5.1                    pypi_0    pypi
+notebook                  6.3.0                    pypi_0    pypi
+openssl                   1.1.1k               h2bbff1b_0  
+packaging                 20.9                     pypi_0    pypi
+pandocfilters             1.4.3                    pypi_0    pypi
+parso                     0.8.2                    pypi_0    pypi
+pickleshare               0.7.5                    pypi_0    pypi
+pip                       21.0.1           py38haa95532_0  
+prometheus-client         0.9.0                    pypi_0    pypi
+prompt-toolkit            3.0.18                   pypi_0    pypi
+psycopg2                  2.8.6            py38hcd4344a_1  
+pycparser                 2.20                     pypi_0    pypi
+pygments                  2.8.1                    pypi_0    pypi
+pyparsing                 2.4.7                    pypi_0    pypi
+pyrsistent                0.17.3                   pypi_0    pypi
+python                    3.8.8                hdbf39b2_4  
+python-dateutil           2.8.1                    pypi_0    pypi
+pytz                      2021.1             pyhd3eb1b0_0  
+pywin32                   300                      pypi_0    pypi
+pywinpty                  0.5.7                    pypi_0    pypi
+pyzmq                     22.0.3                   pypi_0    pypi
+send2trash                1.5.0                    pypi_0    pypi
+setuptools                52.0.0           py38haa95532_0  
+six                       1.15.0                   pypi_0    pypi
+sqlite                    3.35.3               h2bbff1b_0  
+sqlparse                  0.4.1                      py_0  
+terminado                 0.9.4                    pypi_0    pypi
+testpath                  0.4.4                    pypi_0    pypi
+tk                        8.6.10               he774522_0  
+tornado                   6.1                      pypi_0    pypi
+traitlets                 5.0.5                    pypi_0    pypi
+vc                        14.2                 h21ff451_1  
+vs2015_runtime            14.27.29016          h5e58377_2  
+wcwidth                   0.2.5                    pypi_0    pypi
+webencodings              0.5.1                    pypi_0    pypi
+wheel                     0.36.2             pyhd3eb1b0_0  
+whitenoise                5.2.0                    pypi_0    pypi
+wincertstore              0.2                      py38_0  
+zlib                      1.2.11               h62dcd97_4  
